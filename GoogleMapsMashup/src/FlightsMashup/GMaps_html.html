@@ -1,0 +1,108 @@
+<HTML>
+    <APPLET CODE=Da_Applet.class WIDTH=730 HEIGHT=500>
+
+    
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    
+    <script type="text/javascript"
+	src= "http://maps.google.com/maps?file=api">
+    </script>
+
+
+
+// Below is where I define the center of my map, as well as the zoom and other "Map Layer" features \\ 
+
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(34.35, 119.21),
+          zoom: 11,
+          mapTypeId: google.maps.MapTypeId.ROADMAP};
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+	var point;
+ var marker = new google.maps.Marker({
+        position: LAX_loc,
+        map: map,
+    animation: google.maps.Animation.DROP,
+        title:"LAX Airport"})
+   
+  var marker = new google.maps.Marker({
+        position: DVR_loc,
+        map: map,
+    animation: google.maps.Animation.DROP,
+        title:"Denver Airport"})
+   
+  var marker = new google.maps.Marker({
+        position: ATL_loc,
+        map: map,
+    animation: google.maps.Animation.DROP,
+        title:"Atlanta Airport"})
+
+  var marker = new google.maps.Marker({
+        position: DLL_loc,
+        map: map,
+    animation: google.maps.Animation.DROP,
+        title:"Dallas Airport"})
+
+  var marker = new google.maps.Marker({
+        position: CHG_loc,
+        map: map,
+    animation: google.maps.Animation.DROP,
+        title:"Chicago Airport"})
+   }
+
+
+//CONSTANTS MARKERS The variables defined below are the Latitude and Longitude of each of my three Markers... I defined my locations before (and separate from) defining my markers to make the code easier for humans to read \\ 
+  /*
+  var Radius = 3958.755864232;
+  var LAX_loc = new google.maps.LatLng( 34.35 , 119.21) 
+  var DVR_loc = new google.maps.LatLng( 40.94 , 105.10) 
+  var ATL_loc = new google.maps.LatLng( 34.04 , 85.02 ) 
+  var DLL_loc = new google.maps.LatLng( 33.63 , 96.26 ) 
+  var CHG_loc = new google.maps.LatLng( 42.28 , 88.08 ) 
+
+< param NAME = "rad" value = Radius >
+< param NAME = "lax" value = LAX_loc >
+< param NAME = "dvr" value = DVR_loc >
+< param NAME = "atl" value = ATL_loc >
+< param NAME = "dll" value = DLL_loc >
+< param NAME = "chg" value = CHG_loc >*/
+
+// THIS IS FOR SPHERICAL DISTANCES AND LOCATIONS 
+
+  function distance (origen, destino, Radius ) {
+  var ori = new google.maps.LatLng (origen[0],origen[1]);
+  var des = new google.maps.LatLng (destino[0],destino[1]);
+  var dis = google.maps.geometry.spherical.computeDistanceBetween( ori, des, Radius );  
+  return dis;
+}
+
+// MOV AVION(ES)\\
+        function plane_movement( LatLng ) {
+        point = new GLatLng( LatLng );
+    }
+
+ 
+// Below is the Add Marker script(s)... additionally I added a "Drop Animation" using the code highlighted in orange \\
+
+ 
+    </script>
+  
+  
+   <script src ="De_Applet.java">
+       
+                "De_Applet.java.init();"
+                      "initialize();"
+         
+    </script>          
+   
+      
+    <div id="map_canvas" style="width:100%; height:100%"></div>
+   
+
+  <I>Java Compatible</I>
+    </APPLET>
+    </HTML>
