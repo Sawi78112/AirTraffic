@@ -1,0 +1,28 @@
+,,,,,,
+NO,Field Name,Data Type,Required,Related Table / Notes,Description,Visibility
+1,user_id,UUID,Essential,Primary Key,Unique user identifier,Backend Only
+2,username,String,Essential,,Login username,Visible
+3,user_abbreviation,String,Essential,,4-character ID shown in audit logs,Visible
+4,password_hash,String,Essential,,Encrypted password (never stored in plain text),Not Visible
+5,role_id,UUID,Essential,SecurityRoles.role_id (FK),User's primary role,Visible
+6,division_name,String,Essential,,Division assigned to this user,Visible
+7,manager_user_id,UUID,Optional,Users.user_id (FK),User’s direct supervisor,Not Visible
+8,office_email,String,Essential,,Corporate email,Visible
+9,office_phone,String,Essential,,Used for 2FA,Visible
+10,home_email,Array<String>,Optional,,Personal contact emails,Not Visible
+11,home_phone,Array<String>,Optional,,Private or emergency phone numbers,Not Visible
+12,location,String,Optional,,Office or city location,Visible
+13,department,String,Optional,,User's department,Visible
+14,user_status,Enum,Essential,,"Active, Inactive, Transferred",Visible
+15,transferred_to_user_id,UUID,Optional,Users.user_id (FK),If this user’s work was moved,Not Visible
+16,delegated_from_user_id,UUID,Optional,Users.user_id (FK),Privileges temporarily inherited,Not Visible
+17,last_login,Timestamp,Optional,,Last successful login,Visible
+18,last_logout,Timestamp,Optional,,Last logout,Visible
+19,login_attempts,Integer,Optional,,Failed attempts (used for lockout),Not Visible
+20,is_locked,Boolean,Optional,,Account lockout status,Visible
+21,two_factor_enabled,Boolean,Essential,,If 2FA is turned on,Visible
+22,password_reset_questions,JSON,Optional,,Fallback questions for password recovery,Not Visible
+23,created_at,Timestamp,Essential,,User account creation time,Visible
+24,last_updated_at,Timestamp,Optional,,Last profile update,Visible
+25,audit_trail_ids,Array<UUID>,Essential,AuditTrail.audit_id (FK),Tracks all security changes,Not Visible
+,,,,,,
