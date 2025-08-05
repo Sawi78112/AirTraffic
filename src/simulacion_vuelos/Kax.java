@@ -15,6 +15,17 @@ public class Lista {
         Nodo p = new Nodo(oElem);
         p.setSig(_cab);
         _cab = p;
+        _noNodos++;  public void InsBegin(TipoElem oElem)
+    {
+        Nodo p = new Nodo(oElem);
+        p.setSig(_cab);
+        _cab = p;
+        _noNodos++;
+    } public void InsBegin(TipoElem oElem)
+    {
+        Nodo p = new Nodo(oElem);
+        p.setSig(_cab);
+        _cab = p;
         _noNodos++;
     }
     public void InsEnd(TipoElem oElem)
