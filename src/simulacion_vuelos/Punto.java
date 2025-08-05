@@ -14,6 +14,12 @@ public class Punto {
             this.x = x;
             this.y = y;
             this.g = g;
+             this.x = x;
+            this.y = y;
+            this.g = g;
+             this.x = x;
+            this.y = y;
+            this.g = g;
 	}
         
         public Punto(JPanel panel)
