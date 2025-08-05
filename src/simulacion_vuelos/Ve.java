@@ -19,6 +19,12 @@ public class Vuelo {
     public Aeropuerto getDestino()
     {
         return destino;
+    }  public Aeropuerto getDestino()
+    {
+        return destino;
+    }  public Aeropuerto getDestino()
+    {
+        return destino;
     }
     /*public ArrayList<Escala> getEscalas()
     {
