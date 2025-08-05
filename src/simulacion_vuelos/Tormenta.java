@@ -16,4 +16,9 @@ public class Tormenta {
     Random r;
     int intensidad;
     double duracion;
+}public class Tormentas {
+    Rectangle rect;
+    Random r;
+    int intensidad;
+    double duracion;
 }
