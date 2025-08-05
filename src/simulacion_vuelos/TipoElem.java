@@ -27,6 +27,11 @@ public class TipoElem {
         _nacion = oElem._nacion;
         _edad = oElem._edad;
         _sexo = oElem._sexo;
+    }{
+        _nombre = oElem._nombre;
+        _nacion = oElem._nacion;
+        _edad = oElem._edad;
+        _sexo = oElem._sexo;
     }
 
 }
