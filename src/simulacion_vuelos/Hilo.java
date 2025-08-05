@@ -44,28 +44,3 @@ public class Hilo extends Thread{
                 }
             }
 	}
-    public void set(ArrayList<Avion> a, ArrayList<Punto> pun, JPanel p)
-    {
-	aviones = a;
-        jPanel1 = p;
-        puntos = pun;
-    }
-	
-    public void pauseThread() throws InterruptedException
-    {
-        /*synchronized(lock)
-        {
-            lock.wait();
-        }*/
-        sigue = false;
-    }
-
-    public void resumeThread()
-    {
-        sigue = true;
-        /*synchronized(lock)
-        {
-            lock.notify();
-        }*/
-    }
-}
